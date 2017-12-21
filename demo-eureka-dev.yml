@@ -1,0 +1,24 @@
+server:
+  port: 7906
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+
+  instance:
+    hostname: localhost
+#    status-page-url: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/swagger-ui.html # ${server.port}为该服务的端口号
+  metadataMap:
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  # 页面路径
+#  dashboard:
+#    path: "/"
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: gaolin
+    password: 123
