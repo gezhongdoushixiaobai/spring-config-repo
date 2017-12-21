@@ -15,3 +15,12 @@ eureka:
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
     appname: ${spring.application.name}
 
+zuul:
+  routes:
+    role:
+      path: /role/**
+      serviceId: demo-role
+    menu:
+      path: /menu/**
+      serviceId: demo-menu
+
