@@ -1,5 +1,5 @@
 server:
-  port: 7901
+  port: 7904
 spring:
   datasource:
     url: 'jdbc:mysql://127.0.0.1:3306/star_red_hot'
@@ -16,3 +16,18 @@ spring:
     time-between-eviction-runs-millis: 60000
     min-evicable-idle-time-millis: 30000
     validation-query: select 'x'
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+security:
+  user:
+    name: gaolin
+    password: 123
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${security.user.name}:${security.user.password}@127.0.0.1:7906/eureka/
+  instance:
+    status-page-url: http://127.0.0.1:${server.port}/swagger-ui.html
+
