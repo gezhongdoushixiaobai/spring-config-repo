@@ -37,4 +37,4 @@ eureka:
 ---
 urls:
   roles:
-    get-roles-by-userid: "http://localhost:7904/role/getRolesByUserId"
+    get-roles-by-userid: "http://demo-role/role/getRolesByUserId/{userId}"
