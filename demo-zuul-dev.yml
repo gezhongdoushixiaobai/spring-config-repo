@@ -23,4 +23,7 @@ zuul:
     menu:
       path: /menu/**
       serviceId: demo-menu
+    user:
+      path: /user/**
+      serviceId: demo-user
 
