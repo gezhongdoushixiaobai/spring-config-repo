@@ -20,7 +20,14 @@ spring:
     hibernate:
       ddl-auto: none
     show-sql: true
-
+security:
+  user:
+    name: gaolin
+    password: 123
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${security.user.name}:${security.user.password}@127.0.0.1:7906/eureka/
 ---
 urls:
   roles:
