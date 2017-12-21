@@ -16,15 +16,17 @@ eureka:
     appname: ${spring.application.name}
 
 zuul:
-  strip-prefix: false
   routes:
     role:
       path: /role/**
       serviceId: demo-role
+      strip-prefix: false
     menu:
       path: /menu/**
       serviceId: demo-menu
+      strip-prefix: false
     user:
       path: /user/**
       serviceId: demo-user
+      strip-prefix: false
 
