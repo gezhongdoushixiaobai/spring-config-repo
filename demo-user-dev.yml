@@ -38,3 +38,7 @@ eureka:
 urls:
   roles:
     get-roles-by-userid: "http://demo-zuul/role/getRolesByUserId/{userId}"
+
+---
+user:
+  hi: "hello world!"
